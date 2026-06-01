@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celeste Legrand — Print CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f6f4; --ink:#181f18; --forest:#2c4a2c; --copper:#b07040;
+  --slate:#4a5568; --mint:#e4ede8; --light-copper:#f5ead6;
+  --light-forest:#dce8dc; --border:#ccd8cc; --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Inter",sans-serif;
+  background:#d8dcd8; color:var(--ink);
+  line-height:1.5; font-size:11px;
+  padding:1.2rem;
+  display:flex; flex-direction:column; align-items:center; gap:0.9rem;
+  min-height:100vh;
+}
+
+/* mobile actions */
+.mobile-actions{display:flex;gap:0.6rem;width:100%;max-width:210mm;}
+.mob-btn{
+  flex:1;padding:0.72rem 0.5rem;border:none;border-radius:6px;
+  font-family:"Inter",sans-serif;font-size:0.8rem;font-weight:600;
+  cursor:pointer;text-decoration:none;text-align:center;
+  display:flex;align-items:center;justify-content:center;gap:0.35rem;
+  transition:opacity 0.15s;
+}
+.mob-btn:active{opacity:0.75;}
+.btn-print{background:var(--forest);color:white;}
+.btn-share{background:var(--light-forest);color:var(--forest);}
+.btn-back{background:var(--light-copper);color:#7a5010;}
+@media(min-width:700px){.mobile-actions{display:none;}}
+
+/* page */
+.page{
+  background:var(--white);
+  width:100%;max-width:210mm;
+  padding:10mm 12mm 9mm;
+  box-shadow:0 4px 32px rgba(0,0,0,0.15);
+  border-top:4px solid var(--forest);
+}
+
+/* header */
+.header{
+  display:grid;grid-template-columns:1fr auto;
+  align-items:start;gap:1.2rem;
+  padding-bottom:8px;border-bottom:1px solid var(--border);margin-bottom:10px;
+}
+.name-block{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30pt;line-height:1;font-weight:700;
+  color:var(--forest);
+}
+.name-block em{font-style:italic;color:var(--copper);}
+.header-meta{margin-top:4px;font-size:7.5pt;color:var(--slate);letter-spacing:0.05em;}
+.header-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px;}
+.htag{
+  padding:2px 7px;border-radius:2px;
+  font-size:6.5pt;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;
+}
+.htag-forest{background:var(--light-forest);color:var(--forest);}
+.htag-copper{background:var(--light-copper);color:var(--copper);}
+.qr-block{text-align:center;flex-shrink:0;}
+.qr-block img{width:65px;height:65px;display:block;margin:0 auto 3px;border:1px solid var(--border);padding:2px;background:white;}
+.qr-label{font-size:5.5pt;color:#999;line-height:1.4;}
+.qr-url{font-size:6pt;color:var(--forest);font-weight:600;margin-top:1px;}
+
+/* body grid */
+.body-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 13px;}
+.full-width{grid-column:1/-1;}
+
+/* sections */
+.stitle{
+  font-size:5.5pt;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--copper);font-weight:600;margin-bottom:4px;
+  padding-bottom:2px;border-bottom:1px solid var(--border);
+}
+h3{font-family:"Cormorant Garamond",serif;font-size:10pt;font-weight:700;color:var(--forest);margin-bottom:3px;}
+p{font-size:8pt;color:#444;line-height:1.55;}
+
+/* about */
+.about-text p+p{margin-top:3px;}
+.contact-list{margin-top:4px;}
+.ck{display:flex;gap:4px;padding:2px 0;border-bottom:1px dotted #e0e8e0;font-size:7.5pt;color:#4a5a4a;}
+.ck:last-child{border-bottom:none;}
+.ci{color:var(--copper);width:13px;flex-shrink:0;}
+
+/* achievements */
+.achs{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+.ach{padding:5px 7px;border-radius:3px;border-left:2px solid;}
+.ach.forest{border-color:var(--forest);background:#f0f5f0;}
+.ach.copper{border-color:var(--copper);background:#fdf5ec;}
+.ach.slate{border-color:var(--slate);background:#f2f4f6;}
+.ach h4{font-family:"Cormorant Garamond",serif;font-size:8.5pt;font-weight:700;color:var(--forest);margin-bottom:1px;}
+.ach p{font-size:7.5pt;color:#555;}
+
+/* education */
+.edu-school-name{font-family:"Cormorant Garamond",serif;font-size:10pt;font-weight:700;color:var(--forest);}
+.edu-dates{font-size:7pt;color:var(--copper);font-weight:600;margin-bottom:4px;}
+.spills{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px;}
+.spill{padding:2px 5px;border-radius:2px;font-size:7pt;font-weight:500;}
+.spill-done{background:var(--light-copper);color:#8a5010;}
+.spill-prog{background:var(--light-forest);color:var(--forest);}
+.gbox{
+  margin-top:4px;padding:4px 6px;
+  background:#f0f5f0;border-left:2px solid var(--forest);
+  font-size:7.5pt;color:#555;
+}
+.gbox strong{color:var(--ink);}
+
+/* work */
+.work-item{
+  padding:5px 7px;border-left:2px solid var(--copper);
+  background:#fdf8f2;margin-bottom:4px;
+}
+.work-item:last-child{margin-bottom:0;}
+.wh{display:flex;justify-content:space-between;align-items:baseline;gap:4px;margin-bottom:1px;}
+.wt{font-family:"Cormorant Garamond",serif;font-size:8.5pt;font-weight:700;color:var(--forest);}
+.wo{font-size:7pt;color:var(--slate);}
+.wd{font-size:6.5pt;color:var(--copper);font-weight:600;white-space:nowrap;}
+.work-item p{font-size:7.5pt;color:#555;}
+
+/* skills */
+.sk-row{display:flex;align-items:center;gap:4px;padding:2px 0;border-bottom:1px dotted #e0e8e0;font-size:7.5pt;}
+.sk-row:last-child{border-bottom:none;}
+.skdot{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
+
+/* availability */
+.avail-row{display:flex;gap:3px;}
+.dbox{flex:1;text-align:center;padding:4px 1px;border-radius:3px;font-size:6.5pt;font-weight:600;line-height:1.3;}
+.dbox .dn{font-size:5.5pt;text-transform:uppercase;letter-spacing:0.05em;opacity:0.6;display:block;}
+.day-avail{background:var(--light-forest);color:var(--forest);}
+.day-part{background:var(--light-copper);color:#7a5010;}
+
+/* footer */
+.pfooter{
+  margin-top:8px;padding-top:6px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.pfooter p{font-size:7pt;color:#aaa;}
+.pfooter .web{color:var(--forest);font-weight:600;}
+
+@media print{
+  body{background:white;padding:0;gap:0;}
+  .page{box-shadow:none;max-width:none;width:100%;}
+  .mobile-actions,.desktop-actions{display:none!important;}
+}
+.desktop-actions{
+  display:none;position:fixed;bottom:1.5rem;right:1.5rem;
+  flex-direction:column;gap:0.5rem;z-index:100;
+}
+.desk-btn{
+  padding:0.55rem 1.1rem;border:none;border-radius:4px;
+  font-family:"Inter",sans-serif;font-size:0.75rem;font-weight:600;
+  cursor:pointer;text-decoration:none;text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,0.14);transition:opacity 0.15s;
+  display:flex;align-items:center;gap:0.4rem;
+}
+@media(min-width:700px){.desktop-actions{display:flex;}}
+.toast{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(10px);
+  background:var(--forest);color:white;padding:0.45rem 1rem;border-radius:3px;
+  font-size:0.76rem;font-weight:500;opacity:0;transition:opacity 0.3s,transform 0.3s;
+  pointer-events:none;z-index:400;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="mobile-actions">
+  <button class="mob-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
+  <button class="mob-btn btn-share" onclick="nativeShare()">↑ Share</button>
+  <a class="mob-btn btn-back" href="celeste-index.html">← Digital CV</a>
+</div>
+
+<div class="desktop-actions">
+  <button class="desk-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
+  <button class="desk-btn" onclick="copyLink()" style="background:var(--light-copper);color:#7a5010;">🔗 Copy Link</button>
+  <a class="desk-btn" href="celeste-index.html" style="background:var(--light-forest);color:var(--forest);">← Digital CV</a>
+</div>
+<div class="toast" id="toast">Link copied!</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="name-block">Celeste <em>Legrand</em></div>
+      <div class="header-meta">146 Edward Vinson Drive, Faversham, Kent ME13 8FF &nbsp;·&nbsp; 07920 510243 &nbsp;·&nbsp; Age 16 &nbsp;·&nbsp; Seeking Part-Time Work</div>
+      <div class="header-tags">
+        <span class="htag htag-forest">🏆 Dancer &amp; Performer</span>
+        <span class="htag htag-copper">🎖️ Prize-giving Award Winner</span>
+        <span class="htag htag-forest">🥾 Duke of Edinburgh Silver</span>
+        <span class="htag htag-copper">📚 GCSE Student</span>
+      </div>
+    </div>
+    <div class="qr-block">
+      <img src="data:image/png;base64,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" alt="QR code for www.celestelegrand.xyz">
+      <div class="qr-label">Scan for<br>digital CV</div>
+      <div class="qr-url">celestelegrand.xyz</div>
+    </div>
+  </div>
+
+  <div class="body-grid">
+
+    <!-- ABOUT — full width -->
+    <div class="full-width">
+      <div class="stitle">About Me</div>
+      <p>I am a 16-year-old student at school in Faversham, currently completing my GCSEs. I am driven, enthusiastic and reliable — shaped by years of competitive dance performance, school prize-giving recognition and the personal challenges of the Duke of Edinburgh Award. I am seeking part-time work where I can bring energy, commitment and a positive attitude to a team. Happy to discuss hours that suit your business.</p>
+    </div>
+
+    <!-- LEFT col -->
+    <div>
+
+      <!-- ACHIEVEMENTS -->
+      <div class="stitle">Awards &amp; Achievements</div>
+      <div class="achs">
+        <div class="ach forest">
+          <h4>🏆 Best in Year — Science &amp; Drama</h4>
+          <p>Awarded best in year for Science and Drama at school prize-giving — recognising both academic and creative range.</p>
+        </div>
+        <div class="ach copper">
+          <h4>🌟 Performer of the Year — Year 9</h4>
+          <p>Won Performer of the Year in Year 9 — outstanding contribution to performance and the arts.</p>
+        </div>
+        <div class="ach forest">
+          <h4>💃 Best Senior Performer</h4>
+          <p>Won Best Senior Performer at Miss Sophie's Dance Academy — technical excellence and stage presence.</p>
+        </div>
+        <div class="ach copper">
+          <h4>🎖️ Dance Exams — Top Marks</h4>
+          <p>Won many competitions and passed numerous dance exams with top marks over many years.</p>
+        </div>
+        <div class="ach slate">
+          <h4>🥾 DofE Bronze &amp; Silver</h4>
+          <p>Holder of both awards — volunteering, physical activity, skill development and expedition.</p>
+        </div>
+        <div class="ach slate">
+          <h4>🎤 English Spoken — Distinction</h4>
+          <p>Distinction in GCSE English Language spoken exam on animal rights and veganism.</p>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div style="margin-top:8px;">
+        <div class="stitle">Skills &amp; Qualities</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--forest)"></span>Reliable, punctual and self-motivated</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--forest)"></span>Confident performer and public speaker</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--forest)"></span>Strong team player and collaborator</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>Teaching and supporting younger students</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>French language (basic, A-level bound)</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>Volunteering and community service</div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT col -->
+    <div>
+
+      <!-- EDUCATION -->
+      <div class="stitle">Education</div>
+      <div class="edu-school-name">Secondary School, Faversham</div>
+      <div class="edu-dates">2021 — 2026 &nbsp;·&nbsp; Currently studying GCSEs</div>
+      <div class="spills">
+        <span class="spill spill-done">English Literature ✓</span>
+        <span class="spill spill-prog">English Language</span>
+        <span class="spill spill-prog">Mathematics</span>
+        <span class="spill spill-prog">Combined Science</span>
+        <span class="spill spill-prog">History</span>
+        <span class="spill spill-prog">French</span>
+        <span class="spill spill-prog">Drama</span>
+        <span class="spill spill-prog">Dance</span>
+        <span class="spill spill-prog">Religious Education</span>
+      </div>
+      <div class="gbox">
+        <strong>Grade note:</strong> Grade 9=A*, <strong>Grade 7=A</strong>, Grade 4=C. Celeste's Grade 7 in English Lit is a strong upper-range result. She also holds a <strong>Distinction</strong> in her English Language spoken exam.
+      </div>
+
+      <!-- WORK EXPERIENCE -->
+      <div style="margin-top:8px;">
+        <div class="stitle">Work Experience</div>
+        <div class="work-item">
+          <div class="wh"><span class="wt">💼 Marketing Assistant</span><span class="wd">2025</span></div>
+          <div class="wo">WJ Sunstone Systems &nbsp;·&nbsp; Supporting the CMO</div>
+          <p>Supported marketing communications, content and campaign activity in a professional commercial environment.</p>
+        </div>
+        <div class="work-item">
+          <div class="wh"><span class="wt">🦫 Volunteer — Beavers</span><span class="wd">6 months 2024</span></div>
+          <div class="wo">Duke of Edinburgh Bronze Award</div>
+          <p>Assisted leaders with activities and evening sessions, supporting young children.</p>
+        </div>
+        <div class="work-item">
+          <div class="wh"><span class="wt">💃 Volunteer — East Kent Dance Academy</span><span class="wd">6 months 2025</span></div>
+          <div class="wo">Duke of Edinburgh Silver Award</div>
+          <p>Assisted dance leaders with younger dancers, drawing on extensive performance experience.</p>
+        </div>
+      </div>
+
+      <!-- AVAILABILITY -->
+      <div style="margin-top:8px;">
+        <div class="stitle">Availability</div>
+        <div class="avail-row">
+          <div class="dbox day-part"><span class="dn">Mon</span>After school</div>
+          <div class="dbox day-part"><span class="dn">Tue</span>After school</div>
+          <div class="dbox day-part"><span class="dn">Wed</span>After school</div>
+          <div class="dbox day-part"><span class="dn">Thu</span>After school</div>
+          <div class="dbox day-part"><span class="dn">Fri</span>After school</div>
+          <div class="dbox day-avail"><span class="dn">Sat</span>All day</div>
+          <div class="dbox day-avail"><span class="dn">Sun</span>All day</div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div style="margin-top:8px;">
+        <div class="stitle">Contact</div>
+        <div class="ck"><span class="ci">📍</span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
+        <div class="ck"><span class="ci">📞</span>07920 510243</div>
+        <div class="ck"><span class="ci">✉️</span>celestefioralegrand@icloud.com</div>
+        <div class="ck"><span class="ci">🌐</span>www.celestelegrand.xyz</div>
+        <div class="ck"><span class="ci">📋</span>References available on request &nbsp;·&nbsp; Eligible to work in the UK</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="pfooter">
+    <p>References available on request &nbsp;·&nbsp; Eligible to work in the UK</p>
+    <p class="web">www.celestelegrand.xyz</p>
+  </div>
+
+</div>
+
+<script>
+function copyLink() {
+  navigator.clipboard.writeText("https://www.celestelegrand.xyz").then(() => showToast("Link copied!"));
+}
+function nativeShare() {
+  if (navigator.share) {
+    navigator.share({title:"Celeste Legrand — CV", url:"https://www.celestelegrand.xyz"});
+  } else { copyLink(); }
+}
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2400);
+}
+</script>
+</body>
+</html>

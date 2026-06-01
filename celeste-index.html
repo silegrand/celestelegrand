@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="Celeste Legrand — CV. Motivated 16-year-old student seeking part-time work in Faversham, Kent.">
+<title>Celeste Legrand — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f6f4;
+  --ink: #181f18;
+  --forest: #2c4a2c;
+  --copper: #b07040;
+  --slate: #4a5568;
+  --mint: #e4ede8;
+  --light-copper: #f5ead6;
+  --light-forest: #dce8dc;
+  --border: #ccd8cc;
+  --white: #ffffff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:15px;
+  -webkit-text-size-adjust:100%;
+}
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0;
+  background:rgba(244,246,244,0.95);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  z-index:200;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:0 1.5rem;
+  height:54px;
+}
+.nav-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem; font-weight:600; letter-spacing:0.04em;
+  color:var(--forest);
+}
+.nav-links { display:flex; gap:1.5rem; }
+.nav-links a {
+  text-decoration:none; color:var(--slate);
+  font-size:0.72rem; font-weight:500;
+  letter-spacing:0.09em; text-transform:uppercase;
+  opacity:0.7; transition:opacity 0.2s, color 0.2s;
+}
+.nav-links a:hover { opacity:1; color:var(--forest); }
+
+/* ── SHARE ── */
+.share-bar {
+  position:fixed; bottom:0; left:0; right:0;
+  background:var(--white);
+  border-top:2px solid var(--forest);
+  padding:0.7rem 1rem;
+  display:flex; gap:0.6rem;
+  z-index:200;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.08);
+}
+.share-btn {
+  flex:1; display:flex; align-items:center; justify-content:center; gap:0.4rem;
+  padding:0.65rem 0.5rem;
+  border:none; border-radius:6px;
+  font-family:'Inter',sans-serif;
+  font-size:0.78rem; font-weight:600;
+  cursor:pointer; transition:opacity 0.15s, transform 0.15s;
+  text-decoration:none; letter-spacing:0.02em;
+}
+.share-btn:active { opacity:0.75; transform:scale(0.97); }
+.btn-download { background:var(--forest); color:white; }
+.btn-share { background:var(--light-forest); color:var(--forest); }
+.btn-copy { background:var(--light-copper); color:#7a5010; }
+.share-bar-desktop {
+  display:none;
+  position:fixed; top:70px; right:1.5rem;
+  flex-direction:column; gap:0.5rem; z-index:200;
+}
+.share-bar-desktop .share-btn {
+  flex:none; width:auto; padding:0.5rem 1.1rem;
+  border-radius:4px; font-size:0.74rem;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+@media(min-width:700px) { .share-bar{display:none;} .share-bar-desktop{display:flex;} }
+
+/* ── HERO ── */
+.hero {
+  padding:80px 0 0;
+  position:relative; overflow:hidden;
+}
+.hero-inner {
+  background:var(--forest);
+  color:white;
+  padding:60px 1.5rem 56px;
+  position:relative;
+  clip-path:polygon(0 0,100% 0,100% 88%,0 100%);
+}
+.hero-inner::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; bottom:0;
+  background:radial-gradient(ellipse 60% 80% at 80% 50%, rgba(176,112,64,0.18) 0%, transparent 70%);
+  pointer-events:none;
+}
+.container { max-width:860px; margin:0 auto; padding:0 1.2rem; }
+.hero-eyebrow {
+  font-size:0.68rem; letter-spacing:0.25em; text-transform:uppercase;
+  color:rgba(255,255,255,0.55); font-weight:500; margin-bottom:1rem;
+  animation:fadeUp 0.5s ease both;
+}
+.hero h1 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,10vw,6rem);
+  line-height:0.95; font-weight:700; letter-spacing:-0.01em;
+  animation:fadeUp 0.5s 0.1s ease both;
+}
+.hero h1 em { font-style:italic; color:rgba(255,255,255,0.55); }
+.hero-subtitle {
+  margin-top:1.1rem; font-size:0.92rem;
+  color:rgba(255,255,255,0.7); font-weight:300;
+  animation:fadeUp 0.5s 0.2s ease both;
+}
+.hero-tags {
+  display:flex; gap:0.55rem; flex-wrap:wrap;
+  margin-top:1.6rem; padding-bottom:2.5rem;
+  animation:fadeUp 0.5s 0.3s ease both;
+}
+.tag {
+  padding:0.3rem 0.85rem; border-radius:3px;
+  font-size:0.72rem; font-weight:600; letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.tag-copper { background:rgba(176,112,64,0.25); color:#f0c080; border:1px solid rgba(176,112,64,0.3); }
+.tag-mint { background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.15); }
+
+/* ── LAYOUT ── */
+section { padding:52px 0; }
+section+section { border-top:1px solid var(--border); }
+.section-header { display:flex; align-items:center; gap:0.8rem; margin-bottom:2rem; }
+.section-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.5rem; font-weight:400; color:var(--border);
+  line-height:1; flex-shrink:0;
+}
+.section-title-block {}
+.section-label {
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--copper); font-weight:600; display:block; margin-bottom:0.1rem;
+}
+h2 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.75rem; font-weight:700; line-height:1;
+}
+
+/* ── ABOUT ── */
+.about-grid { display:grid; gap:1.8rem; }
+@media(min-width:600px){ .about-grid{grid-template-columns:1fr 1fr;} }
+.about-text p { color:#3a4a3a; line-height:1.8; font-size:0.92rem; }
+.about-text p+p { margin-top:0.9rem; }
+.contact-card {
+  background:var(--white); border:1px solid var(--border);
+  border-top:3px solid var(--forest);
+  border-radius:4px; padding:1.3rem;
+}
+.contact-card h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:600; margin-bottom:0.9rem; color:var(--forest);
+}
+.contact-item {
+  display:flex; align-items:flex-start; gap:0.6rem;
+  font-size:0.82rem; color:#4a5a4a;
+  padding:0.38rem 0; border-bottom:1px solid #eef2ee;
+}
+.contact-item:last-child { border-bottom:none; }
+.ci { width:16px; text-align:center; color:var(--copper); flex-shrink:0; margin-top:1px; }
+.contact-btns { display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap; }
+.c-btn {
+  flex:1; min-width:100px;
+  display:flex; align-items:center; justify-content:center; gap:0.4rem;
+  padding:0.6rem 0.6rem;
+  border-radius:4px; text-decoration:none;
+  font-size:0.78rem; font-weight:600; letter-spacing:0.02em;
+  transition:opacity 0.15s;
+}
+.c-btn:active { opacity:0.75; }
+.c-btn-call { background:var(--forest); color:white; }
+.c-btn-wa { background:#e8f5e0; color:#2a6a1a; }
+
+/* ── ACHIEVEMENTS ── */
+.ach-grid { display:grid; gap:1rem; }
+@media(min-width:480px){ .ach-grid{grid-template-columns:1fr 1fr;} }
+@media(min-width:760px){ .ach-grid{grid-template-columns:repeat(3,1fr);} }
+.ach-card {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:4px; padding:1.3rem;
+  position:relative; overflow:hidden;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.ach-card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,0.08); }
+.ach-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+}
+.ach-card.forest::before { background:var(--forest); }
+.ach-card.copper::before { background:var(--copper); }
+.ach-card.slate::before { background:var(--slate); }
+.ach-icon { font-size:1.5rem; margin-bottom:0.7rem; }
+.ach-card h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:700; margin-bottom:0.35rem; color:var(--forest);
+}
+.ach-card p { font-size:0.81rem; color:#555; line-height:1.6; }
+
+/* ── EDUCATION ── */
+.edu-block {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:4px; padding:1.5rem;
+}
+.edu-header {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;
+}
+.edu-school {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem; font-weight:700; color:var(--forest);
+}
+.edu-sub { font-size:0.8rem; color:#888; margin-top:0.15rem; }
+.edu-dates {
+  font-size:0.74rem; color:var(--copper); font-weight:600;
+  background:var(--light-copper); padding:0.28rem 0.75rem;
+  border-radius:3px; white-space:nowrap; letter-spacing:0.04em;
+}
+.subjects-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:0.4rem; margin-top:0.4rem;
+}
+.spill {
+  padding:0.35rem 0.75rem; border-radius:3px;
+  font-size:0.75rem; font-weight:500; text-align:center;
+}
+.spill-done { background:var(--light-copper); color:#8a5010; }
+.spill-prog { background:var(--light-forest); color:var(--forest); }
+.grade-note {
+  margin-top:0.9rem; padding:0.7rem 0.9rem;
+  background:#f0f5f0; border-left:3px solid var(--forest);
+  border-radius:0 4px 4px 0; font-size:0.8rem; color:#555;
+}
+.grade-note strong { color:var(--ink); }
+
+/* ── WORK EXPERIENCE ── */
+.work-block {
+  background:var(--white); border:1px solid var(--border);
+  border-left:3px solid var(--copper);
+  border-radius:0 4px 4px 0; padding:1.2rem 1.3rem;
+  margin-bottom:0.9rem;
+}
+.work-block:last-child { margin-bottom:0; }
+.work-header {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:0.4rem; margin-bottom:0.5rem;
+}
+.work-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:700; color:var(--forest);
+}
+.work-org { font-size:0.8rem; color:var(--slate); margin-top:0.1rem; }
+.work-date {
+  font-size:0.72rem; color:var(--copper); font-weight:600;
+  background:var(--light-copper); padding:0.22rem 0.65rem;
+  border-radius:3px; white-space:nowrap;
+}
+.work-block p { font-size:0.87rem; color:#444; line-height:1.7; }
+
+/* ── SKILLS ── */
+.skills-grid { display:grid; gap:1.5rem; }
+@media(min-width:560px){ .skills-grid{grid-template-columns:1fr 1fr;} }
+.skill-group h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:700; color:var(--forest); margin-bottom:0.9rem;
+}
+.sk-row {
+  display:flex; align-items:center; gap:0.7rem;
+  padding:0.45rem 0; border-bottom:1px solid #eef2ee;
+  font-size:0.86rem; color:#3a4a3a;
+}
+.sk-row:last-child { border-bottom:none; }
+.sk-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+
+/* ── AVAILABILITY ── */
+.avail-row { display:grid; grid-template-columns:repeat(7,1fr); gap:0.4rem; margin-top:0.5rem; }
+.day-card {
+  text-align:center; padding:0.65rem 0.15rem;
+  border-radius:4px; font-size:0.7rem; font-weight:600; line-height:1.35;
+}
+.day-card .dn {
+  display:block; font-size:0.58rem; text-transform:uppercase;
+  letter-spacing:0.08em; opacity:0.6; margin-bottom:0.2rem; font-weight:500;
+}
+.day-avail { background:var(--light-forest); color:var(--forest); }
+.day-part { background:var(--light-copper); color:#7a5010; }
+
+/* ── FOOTER ── */
+footer {
+  padding:2.5rem 0 5rem;
+  text-align:center; border-top:2px solid var(--forest);
+  background:var(--forest); color:rgba(255,255,255,0.6);
+}
+@media(min-width:700px){ footer{padding-bottom:2.5rem;} }
+footer p { font-size:0.78rem; }
+footer span { color:rgba(255,255,255,0.9); }
+footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px);} to{opacity:1;transform:none;} }
+.reveal { opacity:0; transform:translateY(12px); transition:opacity 0.5s ease,transform 0.5s ease; }
+.reveal.visible { opacity:1; transform:none; }
+
+/* ── TOAST ── */
+.toast {
+  position:fixed; bottom:80px; left:50%; transform:translateX(-50%) translateY(10px);
+  background:var(--forest); color:white;
+  padding:0.5rem 1.1rem; border-radius:3px;
+  font-size:0.78rem; font-weight:500;
+  opacity:0; transition:opacity 0.3s,transform 0.3s;
+  pointer-events:none; z-index:300; white-space:nowrap;
+}
+.toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+@media(min-width:700px){ .toast{bottom:24px;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Celeste Legrand</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#achievements">Awards</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#availability">Hours</a>
+  </div>
+</nav>
+
+<!-- Desktop share -->
+<div class="share-bar-desktop">
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
+  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Copy Link</button>
+</div>
+
+<!-- Mobile share bar -->
+<div class="share-bar">
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
+  <button class="share-btn btn-share" onclick="nativeShare()">↑ Share</button>
+  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Link</button>
+</div>
+
+<div class="toast" id="toast">Link copied!</div>
+
+<!-- HERO -->
+<section class="hero" style="padding-bottom:0;">
+  <div class="hero-inner">
+    <div class="container">
+      <p class="hero-eyebrow">Curriculum Vitae &nbsp;·&nbsp; 2026</p>
+      <h1>Celeste<br><em>Legrand</em></h1>
+      <p class="hero-subtitle">Motivated &amp; Reliable &nbsp;·&nbsp; Faversham, Kent &nbsp;·&nbsp; Seeking Part-Time Work</p>
+      <div class="hero-tags">
+        <span class="tag tag-copper">🏆 Dancer &amp; Performer</span>
+        <span class="tag tag-mint">🥾 Duke of Edinburgh Silver</span>
+        <span class="tag tag-mint">📚 GCSE Student</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <div class="section-title-block">
+        <span class="section-label">About</span>
+        <h2>About Me</h2>
+      </div>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>I am a 16-year-old student at school in Faversham, currently completing my GCSEs. I am a driven, enthusiastic and reliable person — shaped by years of competitive dance performance, school prize-giving achievements and the personal challenges of the Duke of Edinburgh Award.</p>
+        <p>I am looking for part-time work where I can bring energy, commitment and a positive attitude to a team. I am available after school on weekdays and all day at weekends, and happy to discuss hours that suit your business.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Contact &amp; Details</h3>
+        <div class="contact-item"><span class="ci">📍</span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
+        <div class="contact-item"><span class="ci">📞</span><a href="tel:07920509688" style="color:inherit;text-decoration:none;">07920 510243</a></div>
+        <div class="contact-item"><span class="ci">✉️</span><a href="mailto:celestefioralegrand@icloud.com" style="color:inherit;text-decoration:none;">celestefioralegrand@icloud.com</a></div>
+        <div class="contact-item"><span class="ci">🎂</span>16 years old</div>
+        <div class="contact-item"><span class="ci">🌐</span>www.celestelegrand.xyz</div>
+        <div class="contact-item"><span class="ci">📋</span>References available on request</div>
+        <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid #eef2ee;font-size:0.75rem;color:#aaa;text-align:center;">Eligible to work in the UK</div>
+        <div class="contact-btns">
+          <a href="tel:07920509688" class="c-btn c-btn-call">📞 Call</a>
+          <a href="https://wa.me/447920509688" target="_blank" class="c-btn c-btn-wa">🟢 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <div class="section-title-block">
+        <span class="section-label">Awards &amp; Achievements</span>
+        <h2>What I've Achieved</h2>
+      </div>
+    </div>
+    <div class="ach-grid reveal">
+      <div class="ach-card forest">
+        <div class="ach-icon">🏆</div>
+        <h3>Best in Year — Science &amp; Drama</h3>
+        <p>Awarded best in year for both Science and Drama at school prize-giving — a dual recognition that reflects academic range as well as creative talent.</p>
+      </div>
+      <div class="ach-card copper">
+        <div class="ach-icon">🌟</div>
+        <h3>Performer of the Year — Year 9</h3>
+        <p>Won Performer of the Year in Year 9, recognising outstanding contribution to performance and the arts within the school community.</p>
+      </div>
+      <div class="ach-card forest">
+        <div class="ach-icon">💃</div>
+        <h3>Best Senior Performer</h3>
+        <p>Won Best Senior Performer at Miss Sophie's Dance Academy — a prestigious recognition of technical skill and stage presence amongst senior students.</p>
+      </div>
+      <div class="ach-card copper">
+        <div class="ach-icon">🎖️</div>
+        <h3>Dance Competitions &amp; Exams</h3>
+        <p>Won many dance competitions and passed numerous dance exams with top marks — demonstrating consistent excellence and dedication to the craft over many years.</p>
+      </div>
+      <div class="ach-card slate">
+        <div class="ach-icon">🥾</div>
+        <h3>Duke of Edinburgh Silver</h3>
+        <p>Holder of both Bronze and Silver DofE Awards — requiring volunteering, physical activity, skill development and a multi-day expedition. A nationally recognised mark of character.</p>
+      </div>
+      <div class="ach-card slate">
+        <div class="ach-icon">🎤</div>
+        <h3>English Spoken Distinction</h3>
+        <p>Achieved a distinction in the GCSE English Language spoken exam, presenting on animal rights and veganism — demonstrating confident, articulate communication under assessment conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <div class="section-title-block">
+        <span class="section-label">Education</span>
+        <h2>Education</h2>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="edu-block">
+        <div class="edu-header">
+          <div>
+            <div class="edu-school">Secondary School, Faversham</div>
+            <div class="edu-sub">Currently studying for GCSEs</div>
+          </div>
+          <span class="edu-dates">2021 — 2026</span>
+        </div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;">Subjects</div>
+        <div class="subjects-grid">
+          <span class="spill spill-done">English Literature ✓</span>
+          <span class="spill spill-prog">English Language</span>
+          <span class="spill spill-prog">Mathematics</span>
+          <span class="spill spill-prog">Combined Science</span>
+          <span class="spill spill-prog">History</span>
+          <span class="spill spill-prog">French</span>
+          <span class="spill spill-prog">Drama</span>
+          <span class="spill spill-prog">Dance</span>
+          <span class="spill spill-prog">Religious Education</span>
+        </div>
+        <div class="grade-note">
+          <strong>English Literature: Grade 7 (Grade A).</strong> Schools now use a 1–9 number system. Grade 7 is equivalent to a <strong>Grade A</strong> under the traditional A–G system — a strong, upper-range result. Celeste also achieved a <strong>Distinction</strong> in her English Language spoken assessment.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <div class="section-title-block">
+        <span class="section-label">Work Experience</span>
+        <h2>Experience</h2>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="work-block">
+        <div class="work-header">
+          <div>
+            <div class="work-title">Marketing Assistant</div>
+            <div class="work-org">WJ Sunstone Systems &nbsp;·&nbsp; Supporting the Chief Marketing Officer</div>
+          </div>
+          <span class="work-date">2025</span>
+        </div>
+        <p>Supported the Chief Marketing Officer with marketing communications, content and campaign activity — gaining practical experience in a professional commercial environment.</p>
+      </div>
+      <div class="work-block">
+        <div class="work-header">
+          <div>
+            <div class="work-title">Volunteer — Beavers</div>
+            <div class="work-org">Duke of Edinburgh Bronze Award &nbsp;·&nbsp; 6 months</div>
+          </div>
+          <span class="work-date">2024</span>
+        </div>
+        <p>Assisted leaders with activities and the running of evening sessions, supporting young children in a structured volunteering role as part of the Bronze Duke of Edinburgh Award programme.</p>
+      </div>
+      <div class="work-block">
+        <div class="work-header">
+          <div>
+            <div class="work-title">Volunteer — East Kent Dance Academy</div>
+            <div class="work-org">Duke of Edinburgh Silver Award &nbsp;·&nbsp; 6 months</div>
+          </div>
+          <span class="work-date">2025</span>
+        </div>
+        <p>Assisted dance leaders with the teaching and support of younger dancers, drawing on extensive personal competition and performance experience to encourage and guide students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <div class="section-title-block">
+        <span class="section-label">Skills &amp; Qualities</span>
+        <h2>Skills</h2>
+      </div>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-group">
+        <h3>Personal Qualities</h3>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--forest)"></span>Reliable, punctual and self-motivated</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--forest)"></span>Confident performer under pressure</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--forest)"></span>Strong team player and collaborator</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--forest)"></span>Enthusiastic and positive attitude</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--forest)"></span>Creative thinker with academic breadth</div>
+      </div>
+      <div class="skill-group">
+        <h3>Skills &amp; Competencies</h3>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Confident public speaker (Distinction)</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Performance and stage presence</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Teaching and supporting younger students</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>French language (basic, A-level bound)</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Volunteering and community service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section id="availability">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <div class="section-title-block">
+        <span class="section-label">Availability</span>
+        <h2>When I'm Available</h2>
+      </div>
+    </div>
+    <div class="reveal">
+      <p style="color:#555;font-size:0.88rem;margin-bottom:1.2rem;">Available after school on weekdays and throughout the weekend. Happy to discuss specific hours to suit your business.</p>
+      <div class="avail-row">
+        <div class="day-card day-part"><span class="dn">Mon</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Tue</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Wed</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Thu</span>After school</div>
+        <div class="day-card day-part"><span class="dn">Fri</span>After school</div>
+        <div class="day-card day-avail"><span class="dn">Sat</span>All day</div>
+        <div class="day-card day-avail"><span class="dn">Sun</span>All day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Celeste Legrand &nbsp;·&nbsp; 146 Edward Vinson Drive, Faversham, Kent ME13 8FF</p>
+    <p style="margin-top:0.3rem"><span>www.celestelegrand.xyz</span> &nbsp;·&nbsp; References available on request</p>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("visible");
+    const children = e.target.querySelectorAll(".ach-card,.skill-group,.day-card,.work-block");
+    children.forEach((c,i) => {
+      c.style.opacity="0"; c.style.transform="translateY(10px)";
+      c.style.transition="opacity 0.4s ease,transform 0.4s ease";
+      setTimeout(() => { c.style.opacity="1"; c.style.transform="none"; }, i*80);
+    });
+  });
+}, {threshold:0.08});
+reveals.forEach(r => obs.observe(r));
+
+function copyLink() {
+  navigator.clipboard.writeText("https://www.celestelegrand.xyz").then(() => showToast("Link copied!"));
+}
+function nativeShare() {
+  if (navigator.share) {
+    navigator.share({title:"Celeste Legrand — CV", url:"https://www.celestelegrand.xyz"});
+  } else { copyLink(); }
+}
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2400);
+}
+</script>
+</body>
+</html>
