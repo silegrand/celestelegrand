@@ -254,6 +254,27 @@ h2 {
 }
 .grade-note strong { color:var(--ink); }
 
+/* ── RESULTS GRID ── */
+.results-grid { display:grid; gap:0.5rem; margin-top:0.5rem; }
+@media(min-width:520px){ .results-grid{grid-template-columns:1fr 1fr;} }
+.result-row {
+  display:flex; align-items:center; justify-content:space-between; gap:0.6rem;
+  padding:0.55rem 0.85rem; background:#f7faf7;
+  border:1px solid var(--border); border-radius:4px;
+}
+.result-subj { font-size:0.83rem; font-weight:500; color:#2a3a2a; }
+.result-sub-note { display:block; font-size:0.68rem; color:var(--copper); font-weight:600; margin-top:0.1rem; }
+.result-grade {
+  flex-shrink:0; min-width:32px; height:26px; padding:0 0.55rem;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:4px; font-weight:700; font-size:0.85rem;
+}
+.g-top { background:var(--copper); color:#fff; }
+.g-high { background:var(--light-copper); color:#8a5010; }
+.g-mid { background:var(--light-forest); color:var(--forest); }
+.g-pass { background:var(--mint); color:var(--slate); }
+.g-std { background:#ededed; color:#777; }
+
 /* ── WORK EXPERIENCE ── */
 .work-block {
   background:var(--white); border:1px solid var(--border);
@@ -374,7 +395,7 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
       <div class="hero-tags">
         <span class="tag tag-copper">🏆 Dancer &amp; Performer</span>
         <span class="tag tag-mint">🥾 Duke of Edinburgh Silver</span>
-        <span class="tag tag-mint">📚 GCSE Student</span>
+        <span class="tag tag-mint">🎓 10 GCSEs Achieved</span>
       </div>
     </div>
   </div>
@@ -392,7 +413,7 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
     </div>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>I am a 16-year-old student at school in Faversham, currently completing my GCSEs. I am a driven, enthusiastic and reliable person — shaped by years of competitive dance performance, school prize-giving achievements and the personal challenges of the Duke of Edinburgh Award.</p>
+        <p>I am a 16-year-old student in Faversham who has recently completed my GCSEs, achieving ten passes including a Grade 8 in Dance and Grade 7 in English Language, English Literature and French. I am a driven, enthusiastic and reliable person — shaped by years of competitive dance performance, school prize-giving achievements and the personal challenges of the Duke of Edinburgh Award.</p>
         <p>I am looking for part-time work where I can bring energy, commitment and a positive attitude to a team. I am available after school on weekdays and all day at weekends, and happy to discuss hours that suit your business.</p>
       </div>
       <div class="contact-card">
@@ -473,24 +494,51 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
         <div class="edu-header">
           <div>
             <div class="edu-school">Secondary School, Faversham</div>
-            <div class="edu-sub">Currently studying for GCSEs</div>
+            <div class="edu-sub">GCSE results achieved · 10 GCSEs</div>
           </div>
           <span class="edu-dates">2021 — 2026</span>
         </div>
-        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;">Subjects</div>
-        <div class="subjects-grid">
-          <span class="spill spill-done">English Literature ✓</span>
-          <span class="spill spill-prog">English Language</span>
-          <span class="spill spill-prog">Mathematics</span>
-          <span class="spill spill-prog">Combined Science</span>
-          <span class="spill spill-prog">History</span>
-          <span class="spill spill-prog">French</span>
-          <span class="spill spill-prog">Drama</span>
-          <span class="spill spill-prog">Dance</span>
-          <span class="spill spill-prog">Religious Education</span>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin-bottom:0.5rem;">Results</div>
+        <div class="results-grid">
+          <div class="result-row">
+            <span class="result-subj">Dance</span>
+            <span class="result-grade g-top">8</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">English Language<span class="result-sub-note">Distinction in Spoken Language</span></span>
+            <span class="result-grade g-high">7</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">English Literature<span class="result-sub-note">Achieved 2025</span></span>
+            <span class="result-grade g-high">7</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">French</span>
+            <span class="result-grade g-high">7</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">Drama</span>
+            <span class="result-grade g-mid">6</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">Religious Studies</span>
+            <span class="result-grade g-pass">5</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">Mathematics</span>
+            <span class="result-grade g-pass">5</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">Combined Science <span style="color:#999;font-weight:400;">(Higher)</span></span>
+            <span class="result-grade g-std">4-4</span>
+          </div>
+          <div class="result-row">
+            <span class="result-subj">History</span>
+            <span class="result-grade g-std">4</span>
+          </div>
         </div>
         <div class="grade-note">
-          <strong>English Literature: Grade 7 (Grade A).</strong> Schools now use a 1–9 number system. Grade 7 is equivalent to a <strong>Grade A</strong> under the traditional A–G system — a strong, upper-range result. Celeste also achieved a <strong>Distinction</strong> in her English Language spoken assessment.
+          <strong>How the grades work:</strong> since 2017, GCSEs use a 9–1 scale instead of A*–G, with 9 the highest. A <strong>Grade 8 is broadly equivalent to an A*/A</strong>, Grade 7 to an A, and Grade 4 is a standard pass (old Grade C). Celeste achieved ten GCSEs, all passes, plus a <strong>Distinction</strong> in her English Language spoken assessment.
         </div>
       </div>
     </div>
@@ -566,7 +614,7 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
         <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Confident public speaker (Distinction)</div>
         <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Performance and stage presence</div>
         <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Teaching and supporting younger students</div>
-        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>French language (basic, A-level bound)</div>
+        <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>French language (Grade 7, A-level bound)</div>
         <div class="sk-row"><span class="sk-dot" style="background:var(--copper)"></span>Volunteering and community service</div>
       </div>
     </div>
