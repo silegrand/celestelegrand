@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f4f6f4; --ink:#181f18; --forest:#2c4a2c; --copper:#b07040;
-  --slate:#4a5568; --mint:#e4ede8; --light-copper:#f5ead6;
-  --light-forest:#dce8dc; --border:#ccd8cc; --white:#ffffff;
+  --bg:#fbf7fa; --ink:#1f1426; --forest:#5b1f7a; --copper:#e0457b;
+  --slate:#5a4f6b; --mint:#f2eaf6; --light-copper:#fde7ef;
+  --light-forest:#ece0f4; --border:#e8dbe9; --white:#ffffff;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   font-family:"Inter",sans-serif;
-  background:#d8dcd8; color:var(--ink);
+  background:#e9e1ec; color:var(--ink);
   line-height:1.5; font-size:11px;
   padding:1.2rem;
   display:flex; flex-direction:column; align-items:center; gap:0.9rem;
@@ -34,7 +34,7 @@ body{
 .mob-btn:active{opacity:0.75;}
 .btn-print{background:var(--forest);color:white;}
 .btn-share{background:var(--light-forest);color:var(--forest);}
-.btn-back{background:var(--light-copper);color:#7a5010;}
+.btn-back{background:var(--light-copper);color:#b3285c;}
 @media(min-width:700px){.mobile-actions{display:none;}}
 
 /* page */
@@ -87,15 +87,15 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 /* about */
 .about-text p+p{margin-top:3px;}
 .contact-list{margin-top:4px;}
-.ck{display:flex;gap:4px;padding:2px 0;border-bottom:1px dotted #e0e8e0;font-size:7.5pt;color:#4a5a4a;}
+.ck{display:flex;gap:4px;padding:2px 0;border-bottom:1px dotted #ece3ef;font-size:7.5pt;color:#4f4560;}
 .ck:last-child{border-bottom:none;}
 .ci{color:var(--copper);width:13px;flex-shrink:0;}
 
 /* achievements */
 .achs{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
 .ach{padding:5px 7px;border-radius:3px;border-left:2px solid;}
-.ach.forest{border-color:var(--forest);background:#f0f5f0;}
-.ach.copper{border-color:var(--copper);background:#fdf5ec;}
+.ach.forest{border-color:var(--forest);background:#f6f0f9;}
+.ach.copper{border-color:var(--copper);background:#fff2f6;}
 .ach.slate{border-color:var(--slate);background:#f2f4f6;}
 .ach.wide{grid-column:1/-1;}
 .ach h4{font-family:"Cormorant Garamond",serif;font-size:8.5pt;font-weight:700;color:var(--forest);margin-bottom:1px;}
@@ -106,16 +106,16 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .edu-dates{font-size:7pt;color:var(--copper);font-weight:600;margin-bottom:4px;}
 .spills{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px;}
 .spill{padding:2px 5px;border-radius:2px;font-size:7pt;font-weight:500;}
-.spill-done{background:var(--light-copper);color:#8a5010;}
+.spill-done{background:var(--light-copper);color:#b3285c;}
 .spill-prog{background:var(--light-forest);color:var(--forest);}
 .g-top{background:var(--copper);color:#fff;font-weight:700;}
-.g-high{background:var(--light-copper);color:#8a5010;font-weight:700;}
+.g-high{background:var(--light-copper);color:#b3285c;font-weight:700;}
 .g-mid{background:var(--light-forest);color:var(--forest);font-weight:700;}
 .g-pass{background:var(--mint);color:var(--slate);font-weight:700;}
 .g-std{background:#ededed;color:#777;font-weight:700;}
 .gbox{
   margin-top:4px;padding:4px 6px;
-  background:#f0f5f0;border-left:2px solid var(--forest);
+  background:#f6f0f9;border-left:2px solid var(--forest);
   font-size:7.5pt;color:#555;
 }
 .gbox strong{color:var(--ink);}
@@ -123,7 +123,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 /* work */
 .work-item{
   padding:5px 7px;border-left:2px solid var(--copper);
-  background:#fdf8f2;margin-bottom:4px;
+  background:#fff6f9;margin-bottom:4px;
 }
 .work-item:last-child{margin-bottom:0;}
 .wh{display:flex;justify-content:space-between;align-items:baseline;gap:4px;margin-bottom:1px;}
@@ -133,7 +133,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .work-item p{font-size:7.5pt;color:#555;}
 
 /* skills */
-.sk-row{display:flex;align-items:center;gap:4px;padding:2px 0;border-bottom:1px dotted #e0e8e0;font-size:7.5pt;}
+.sk-row{display:flex;align-items:center;gap:4px;padding:2px 0;border-bottom:1px dotted #ece3ef;font-size:7.5pt;}
 .sk-row:last-child{border-bottom:none;}
 .skdot{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
 
@@ -142,7 +142,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .dbox{flex:1;text-align:center;padding:4px 1px;border-radius:3px;font-size:6.5pt;font-weight:600;line-height:1.3;}
 .dbox .dn{font-size:5.5pt;text-transform:uppercase;letter-spacing:0.05em;opacity:0.6;display:block;}
 .day-avail{background:var(--light-forest);color:var(--forest);}
-.day-part{background:var(--light-copper);color:#7a5010;}
+.day-part{background:var(--light-copper);color:#b3285c;}
 .day-busy{background:#f0f0f0;color:#aaa;}
 
 /* footer */
@@ -177,20 +177,35 @@ p{font-size:8pt;color:#444;line-height:1.55;}
   pointer-events:none;z-index:400;white-space:nowrap;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.14em;flex-shrink:0;}
+.page{border-top:none;position:relative;}
+.page::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#3f1460,#6e1f80 45%,#e0457b 85%,#ff7a5c);}
+.htag{display:inline-flex;align-items:center;gap:3px;}
+.htag .ic{font-size:7.5pt;}
+.ach h4 .ic{color:var(--copper);margin-right:2px;}
+.ach.forest h4 .ic{color:var(--forest);}
+.ach.slate h4 .ic{color:var(--slate);}
+.wt .ic{color:var(--copper);margin-right:2px;}
+.ci{display:flex;align-items:center;font-size:8pt;}
+.mob-btn .ic,.desk-btn .ic{font-size:0.95rem;}
+.g-top{background:linear-gradient(135deg,var(--copper),#ff7a5c);}
+@media print{.page::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;} body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol><symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol><symbol id="i-brief" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol><symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M22 10v6"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol><symbol id="i-clip" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-medal" viewBox="0 0 24 24"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol><symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol><symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol></svg>
 
 <div class="mobile-actions">
-  <button class="mob-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
-  <button class="mob-btn btn-share" onclick="nativeShare()">↑ Share</button>
-  <a class="mob-btn btn-back" href="index.html">← Digital CV</a>
+  <button class="mob-btn btn-print" onclick="window.print()"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg> Print / Save PDF</button>
+  <button class="mob-btn btn-share" onclick="nativeShare()"><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg> Share</button>
+  <a class="mob-btn btn-back" href="index.html"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg> Digital CV</a>
 </div>
 
 <div class="desktop-actions">
-  <button class="desk-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
-  <button class="desk-btn" onclick="copyLink()" style="background:var(--light-copper);color:#7a5010;">🔗 Copy Link</button>
-  <a class="desk-btn" href="index.html" style="background:var(--light-forest);color:var(--forest);">← Digital CV</a>
+  <button class="desk-btn btn-print" onclick="window.print()"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg> Print / Save PDF</button>
+  <button class="desk-btn" onclick="copyLink()" style="background:var(--light-copper);color:#b3285c;"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Copy Link</button>
+  <a class="desk-btn" href="index.html" style="background:var(--light-forest);color:var(--forest);"><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg> Digital CV</a>
 </div>
 <div class="toast" id="toast">Link copied!</div>
 
@@ -200,13 +215,13 @@ p{font-size:8pt;color:#444;line-height:1.55;}
   <div class="header">
     <div>
       <div class="name-block">Celeste <em>Legrand</em></div>
-      <div class="header-meta">146 Edward Vinson Drive, Faversham, Kent ME13 8FF &nbsp;·&nbsp; 07920 509688 &nbsp;·&nbsp; Age 16 &nbsp;·&nbsp; Seeking Part-Time Work</div>
+      <div class="header-meta">Faversham, Kent &nbsp;·&nbsp; 07920 509688 &nbsp;·&nbsp; Age 16 &nbsp;·&nbsp; Seeking Part-Time Work</div>
       <div class="header-tags">
-        <span class="htag htag-forest">🏆 Dancer &amp; Performer</span>
-        <span class="htag htag-copper">🎖️ Prize-giving Award Winner</span>
-        <span class="htag htag-forest">🥾 Duke of Edinburgh Silver</span>
-        <span class="htag htag-copper">🎓 10 GCSEs Achieved</span>
-        <span class="htag htag-forest">📚 BTEC Dance &amp; A Level French</span>
+        <span class="htag htag-forest"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg> Dancer &amp; Performer</span>
+        <span class="htag htag-copper"><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg> Prize-giving Award Winner</span>
+        <span class="htag htag-forest"><svg class="ic" aria-hidden="true"><use href="#i-mountain"/></svg> Duke of Edinburgh Silver</span>
+        <span class="htag htag-copper"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg> 10 GCSEs Achieved</span>
+        <span class="htag htag-forest"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg> BTEC Dance &amp; A Level French</span>
       </div>
     </div>
     <div class="qr-block">
@@ -231,31 +246,31 @@ p{font-size:8pt;color:#444;line-height:1.55;}
       <div class="stitle">Awards &amp; Achievements</div>
       <div class="achs">
         <div class="ach forest">
-          <h4>🏆 Best in Year — Science &amp; Drama</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg> Best in Year — Science &amp; Drama</h4>
           <p>Awarded best in year for Science and Drama at school prize-giving — recognising both academic and creative range.</p>
         </div>
         <div class="ach copper">
-          <h4>🌟 Performer of the Year — Year 9</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg> Performer of the Year — Year 9</h4>
           <p>Won Performer of the Year in Year 9 — outstanding contribution to performance and the arts.</p>
         </div>
         <div class="ach forest">
-          <h4>💃 Best Senior Performer</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-music"/></svg> Best Senior Performer</h4>
           <p>Won Best Senior Performer at Miss Sophie's Dance Academy — technical excellence and stage presence.</p>
         </div>
         <div class="ach copper">
-          <h4>🎖️ Dance Exams — Top Marks</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg> Dance Exams — Top Marks</h4>
           <p>Won many competitions and passed numerous dance exams with top marks over many years.</p>
         </div>
         <div class="ach slate">
-          <h4>🥾 DofE Bronze &amp; Silver</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-mountain"/></svg> DofE Bronze &amp; Silver</h4>
           <p>Holder of both awards — volunteering, physical activity, skill development and expedition.</p>
         </div>
         <div class="ach slate">
-          <h4>🎤 English Spoken — Distinction</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg> English Spoken — Distinction</h4>
           <p>Distinction in GCSE English Language spoken exam on animal rights and veganism.</p>
         </div>
         <div class="ach copper wide">
-          <h4>🥇 Ballroom &amp; Latin: Bronze and Silver Medals</h4>
+          <h4><svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg> Ballroom &amp; Latin: Bronze and Silver Medals</h4>
           <p>Bronze and Silver medals in Ballroom and Latin dance, assessed on technique, timing and performance.</p>
         </div>
       </div>
@@ -305,17 +320,17 @@ p{font-size:8pt;color:#444;line-height:1.55;}
       <div style="margin-top:8px;">
         <div class="stitle">Work Experience</div>
         <div class="work-item">
-          <div class="wh"><span class="wt">💼 Marketing Assistant</span><span class="wd">2025</span></div>
+          <div class="wh"><span class="wt"><svg class="ic" aria-hidden="true"><use href="#i-brief"/></svg> Marketing Assistant</span><span class="wd">2025</span></div>
           <div class="wo">WJ Sunstone Systems &nbsp;·&nbsp; Supporting the CMO</div>
           <p>Supported marketing communications, content and campaign activity in a professional commercial environment.</p>
         </div>
         <div class="work-item">
-          <div class="wh"><span class="wt">💃 Volunteer — East Kent Dance Academy</span><span class="wd">6 months 2025</span></div>
+          <div class="wh"><span class="wt"><svg class="ic" aria-hidden="true"><use href="#i-music"/></svg> Volunteer — East Kent Dance Academy</span><span class="wd">6 months 2025</span></div>
           <div class="wo">Duke of Edinburgh Silver Award</div>
           <p>Assisted dance leaders with younger dancers, drawing on extensive performance experience.</p>
         </div>
         <div class="work-item">
-          <div class="wh"><span class="wt">🦫 Volunteer — Beavers</span><span class="wd">6 months 2024</span></div>
+          <div class="wh"><span class="wt"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg> Volunteer — Beavers</span><span class="wd">6 months 2024</span></div>
           <div class="wo">Duke of Edinburgh Bronze Award</div>
           <p>Assisted leaders with activities and evening sessions, supporting young children.</p>
         </div>
@@ -338,11 +353,11 @@ p{font-size:8pt;color:#444;line-height:1.55;}
       <!-- CONTACT -->
       <div style="margin-top:8px;">
         <div class="stitle">Contact</div>
-        <div class="ck"><span class="ci">📍</span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
-        <div class="ck"><span class="ci">📞</span>07920 509688</div>
-        <div class="ck"><span class="ci">✉️</span>celestefioralegrand@icloud.com</div>
-        <div class="ck"><span class="ci">🌐</span>www.celestelegrand.xyz</div>
-        <div class="ck"><span class="ci">📋</span>References available on request &nbsp;·&nbsp; Eligible to work in the UK</div>
+        <div class="ck"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>Faversham, Kent</div>
+        <div class="ck"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>07920 509688</div>
+        <div class="ck"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span>celestefioralegrand@icloud.com</div>
+        <div class="ck"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></span>www.celestelegrand.xyz</div>
+        <div class="ck"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>References available on request &nbsp;·&nbsp; Eligible to work in the UK</div>
       </div>
 
     </div>
