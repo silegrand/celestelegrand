@@ -97,6 +97,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .ach.forest{border-color:var(--forest);background:#f0f5f0;}
 .ach.copper{border-color:var(--copper);background:#fdf5ec;}
 .ach.slate{border-color:var(--slate);background:#f2f4f6;}
+.ach.wide{grid-column:1/-1;}
 .ach h4{font-family:"Cormorant Garamond",serif;font-size:8.5pt;font-weight:700;color:var(--forest);margin-bottom:1px;}
 .ach p{font-size:7.5pt;color:#555;}
 
@@ -142,6 +143,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .dbox .dn{font-size:5.5pt;text-transform:uppercase;letter-spacing:0.05em;opacity:0.6;display:block;}
 .day-avail{background:var(--light-forest);color:var(--forest);}
 .day-part{background:var(--light-copper);color:#7a5010;}
+.day-busy{background:#f0f0f0;color:#aaa;}
 
 /* footer */
 .pfooter{
@@ -182,13 +184,13 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 <div class="mobile-actions">
   <button class="mob-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
   <button class="mob-btn btn-share" onclick="nativeShare()">↑ Share</button>
-  <a class="mob-btn btn-back" href="celeste-index.html">← Digital CV</a>
+  <a class="mob-btn btn-back" href="index.html">← Digital CV</a>
 </div>
 
 <div class="desktop-actions">
   <button class="desk-btn btn-print" onclick="window.print()">🖨 Print / Save PDF</button>
   <button class="desk-btn" onclick="copyLink()" style="background:var(--light-copper);color:#7a5010;">🔗 Copy Link</button>
-  <a class="desk-btn" href="celeste-index.html" style="background:var(--light-forest);color:var(--forest);">← Digital CV</a>
+  <a class="desk-btn" href="index.html" style="background:var(--light-forest);color:var(--forest);">← Digital CV</a>
 </div>
 <div class="toast" id="toast">Link copied!</div>
 
@@ -198,12 +200,13 @@ p{font-size:8pt;color:#444;line-height:1.55;}
   <div class="header">
     <div>
       <div class="name-block">Celeste <em>Legrand</em></div>
-      <div class="header-meta">146 Edward Vinson Drive, Faversham, Kent ME13 8FF &nbsp;·&nbsp; 07920 510243 &nbsp;·&nbsp; Age 16 &nbsp;·&nbsp; Seeking Part-Time Work</div>
+      <div class="header-meta">146 Edward Vinson Drive, Faversham, Kent ME13 8FF &nbsp;·&nbsp; 07920 509688 &nbsp;·&nbsp; Age 16 &nbsp;·&nbsp; Seeking Part-Time Work</div>
       <div class="header-tags">
         <span class="htag htag-forest">🏆 Dancer &amp; Performer</span>
         <span class="htag htag-copper">🎖️ Prize-giving Award Winner</span>
         <span class="htag htag-forest">🥾 Duke of Edinburgh Silver</span>
         <span class="htag htag-copper">🎓 10 GCSEs Achieved</span>
+        <span class="htag htag-forest">📚 BTEC Dance &amp; A Level French</span>
       </div>
     </div>
     <div class="qr-block">
@@ -218,7 +221,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
     <!-- ABOUT — full width -->
     <div class="full-width">
       <div class="stitle">About Me</div>
-      <p>I am a 16-year-old student who has recently completed ten GCSEs, including a Grade 8 in Dance and Grade 7 in English Language, English Literature and French. I am driven, enthusiastic and reliable — shaped by years of competitive dance performance, school prize-giving recognition and the personal challenges of the Duke of Edinburgh Award. I am seeking part-time work where I can bring energy, commitment and a positive attitude to a team. Happy to discuss hours that suit your business.</p>
+      <p>I am a 16-year-old student currently studying BTEC Dance and A Level French, having achieved ten GCSEs including a Grade 8 in Dance and Grade 7 in English Language, English Literature and French. I am driven, enthusiastic and reliable, shaped by years of competitive ballroom, Latin and performance dance, school prize-giving recognition and the personal challenges of the Duke of Edinburgh Award. I am seeking part-time work where I can bring energy, commitment and a positive attitude to a team. Happy to discuss hours that suit your business.</p>
     </div>
 
     <!-- LEFT col -->
@@ -251,6 +254,10 @@ p{font-size:8pt;color:#444;line-height:1.55;}
           <h4>🎤 English Spoken — Distinction</h4>
           <p>Distinction in GCSE English Language spoken exam on animal rights and veganism.</p>
         </div>
+        <div class="ach copper wide">
+          <h4>🥇 Ballroom &amp; Latin: Bronze and Silver Medals</h4>
+          <p>Bronze and Silver medals in Ballroom and Latin dance, assessed on technique, timing and performance.</p>
+        </div>
       </div>
 
       <!-- SKILLS -->
@@ -260,7 +267,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
         <div class="sk-row"><span class="skdot" style="background:var(--forest)"></span>Confident performer and public speaker</div>
         <div class="sk-row"><span class="skdot" style="background:var(--forest)"></span>Strong team player and collaborator</div>
         <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>Teaching and supporting younger students</div>
-        <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>French language (Grade 7, A-level bound)</div>
+        <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>French language (Grade 7, now studying A Level)</div>
         <div class="sk-row"><span class="skdot" style="background:var(--copper)"></span>Volunteering and community service</div>
       </div>
 
@@ -271,6 +278,12 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 
       <!-- EDUCATION -->
       <div class="stitle">Education</div>
+      <div class="edu-school-name">Sixth Form Studies</div>
+      <div class="edu-dates">2026 to present &nbsp;·&nbsp; Currently studying</div>
+      <div class="spills" style="margin-bottom:6px;">
+        <span class="spill spill-prog">BTEC Dance</span>
+        <span class="spill spill-prog">A Level French</span>
+      </div>
       <div class="edu-school-name">Secondary School, Faversham</div>
       <div class="edu-dates">2021 — 2026 &nbsp;·&nbsp; 10 GCSEs achieved</div>
       <div class="spills">
@@ -279,10 +292,10 @@ p{font-size:8pt;color:#444;line-height:1.55;}
         <span class="spill g-high">English Literature · 7</span>
         <span class="spill g-high">French · 7</span>
         <span class="spill g-mid">Drama · 6</span>
-        <span class="spill g-pass">Religious Studies · 5</span>
+        <span class="spill g-mid">Religious Studies · 6</span>
         <span class="spill g-pass">Mathematics · 5</span>
+        <span class="spill g-pass">History · 5</span>
         <span class="spill g-std">Combined Science (H) · 4-4</span>
-        <span class="spill g-std">History · 4</span>
       </div>
       <div class="gbox">
         <strong>Grade note for employers:</strong> GCSEs use a 9–1 scale instead of A*–G. Grade 9 = A*, <strong>Grade 8 ≈ A*/A</strong>, Grade 7 = A, Grade 4 = standard pass (C). Ten GCSEs, all passes, plus a <strong>Distinction</strong> in the English Language spoken exam.
@@ -297,14 +310,14 @@ p{font-size:8pt;color:#444;line-height:1.55;}
           <p>Supported marketing communications, content and campaign activity in a professional commercial environment.</p>
         </div>
         <div class="work-item">
-          <div class="wh"><span class="wt">🦫 Volunteer — Beavers</span><span class="wd">6 months 2024</span></div>
-          <div class="wo">Duke of Edinburgh Bronze Award</div>
-          <p>Assisted leaders with activities and evening sessions, supporting young children.</p>
-        </div>
-        <div class="work-item">
           <div class="wh"><span class="wt">💃 Volunteer — East Kent Dance Academy</span><span class="wd">6 months 2025</span></div>
           <div class="wo">Duke of Edinburgh Silver Award</div>
           <p>Assisted dance leaders with younger dancers, drawing on extensive performance experience.</p>
+        </div>
+        <div class="work-item">
+          <div class="wh"><span class="wt">🦫 Volunteer — Beavers</span><span class="wd">6 months 2024</span></div>
+          <div class="wo">Duke of Edinburgh Bronze Award</div>
+          <p>Assisted leaders with activities and evening sessions, supporting young children.</p>
         </div>
       </div>
 
@@ -326,7 +339,7 @@ p{font-size:8pt;color:#444;line-height:1.55;}
       <div style="margin-top:8px;">
         <div class="stitle">Contact</div>
         <div class="ck"><span class="ci">📍</span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
-        <div class="ck"><span class="ci">📞</span>07920 510243</div>
+        <div class="ck"><span class="ci">📞</span>07920 509688</div>
         <div class="ck"><span class="ci">✉️</span>celestefioralegrand@icloud.com</div>
         <div class="ck"><span class="ci">🌐</span>www.celestelegrand.xyz</div>
         <div class="ck"><span class="ci">📋</span>References available on request &nbsp;·&nbsp; Eligible to work in the UK</div>
