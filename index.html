@@ -9,15 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f4f6f4;
-  --ink: #181f18;
-  --forest: #2c4a2c;
-  --copper: #b07040;
-  --slate: #4a5568;
-  --mint: #e4ede8;
-  --light-copper: #f5ead6;
-  --light-forest: #dce8dc;
-  --border: #ccd8cc;
+  --bg: #fbf7fa;
+  --ink: #1f1426;
+  --forest: #5b1f7a;
+  --copper: #e0457b;
+  --slate: #5a4f6b;
+  --mint: #f2eaf6;
+  --light-copper: #fde7ef;
+  --light-forest: #ece0f4;
+  --border: #e8dbe9;
   --white: #ffffff;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -34,7 +34,7 @@ body {
 /* ── NAV ── */
 nav {
   position:fixed; top:0; left:0; right:0;
-  background:rgba(244,246,244,0.95);
+  background:rgba(251,247,250,0.94);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
@@ -79,7 +79,7 @@ nav {
 .share-btn:active { opacity:0.75; transform:scale(0.97); }
 .btn-download { background:var(--forest); color:white; }
 .btn-share { background:var(--light-forest); color:var(--forest); }
-.btn-copy { background:var(--light-copper); color:#7a5010; }
+.btn-copy { background:var(--light-copper); color:#b3285c; }
 .share-bar-desktop {
   display:none;
   position:fixed; top:70px; right:1.5rem;
@@ -107,7 +107,7 @@ nav {
 .hero-inner::before {
   content:'';
   position:absolute; top:0; left:0; right:0; bottom:0;
-  background:radial-gradient(ellipse 60% 80% at 80% 50%, rgba(176,112,64,0.18) 0%, transparent 70%);
+  background:radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,120,160,0.18) 0%, transparent 70%);
   pointer-events:none;
 }
 .container { max-width:860px; margin:0 auto; padding:0 1.2rem; }
@@ -138,7 +138,7 @@ nav {
   font-size:0.72rem; font-weight:600; letter-spacing:0.04em;
   text-transform:uppercase;
 }
-.tag-copper { background:rgba(176,112,64,0.25); color:#f0c080; border:1px solid rgba(176,112,64,0.3); }
+.tag-copper { background:rgba(255,120,160,0.25); color:#ffc7d8; border:1px solid rgba(255,120,160,0.3); }
 .tag-mint { background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.15); }
 
 /* ── LAYOUT ── */
@@ -163,7 +163,7 @@ h2 {
 /* ── ABOUT ── */
 .about-grid { display:grid; gap:1.8rem; }
 @media(min-width:600px){ .about-grid{grid-template-columns:1fr 1fr;} }
-.about-text p { color:#3a4a3a; line-height:1.8; font-size:0.92rem; }
+.about-text p { color:#3d3348; line-height:1.8; font-size:0.92rem; }
 .about-text p+p { margin-top:0.9rem; }
 .contact-card {
   background:var(--white); border:1px solid var(--border);
@@ -176,8 +176,8 @@ h2 {
 }
 .contact-item {
   display:flex; align-items:flex-start; gap:0.6rem;
-  font-size:0.82rem; color:#4a5a4a;
-  padding:0.38rem 0; border-bottom:1px solid #eef2ee;
+  font-size:0.82rem; color:#4f4560;
+  padding:0.38rem 0; border-bottom:1px solid #f3edf5;
 }
 .contact-item:last-child { border-bottom:none; }
 .ci { width:16px; text-align:center; color:var(--copper); flex-shrink:0; margin-top:1px; }
@@ -246,11 +246,11 @@ h2 {
   padding:0.35rem 0.75rem; border-radius:3px;
   font-size:0.75rem; font-weight:500; text-align:center;
 }
-.spill-done { background:var(--light-copper); color:#8a5010; }
+.spill-done { background:var(--light-copper); color:#b3285c; }
 .spill-prog { background:var(--light-forest); color:var(--forest); }
 .grade-note {
   margin-top:0.9rem; padding:0.7rem 0.9rem;
-  background:#f0f5f0; border-left:3px solid var(--forest);
+  background:#f6f0f9; border-left:3px solid var(--forest);
   border-radius:0 4px 4px 0; font-size:0.8rem; color:#555;
 }
 .grade-note strong { color:var(--ink); }
@@ -260,10 +260,10 @@ h2 {
 @media(min-width:520px){ .results-grid{grid-template-columns:1fr 1fr;} }
 .result-row {
   display:flex; align-items:center; justify-content:space-between; gap:0.6rem;
-  padding:0.55rem 0.85rem; background:#f7faf7;
+  padding:0.55rem 0.85rem; background:#fcf9fc;
   border:1px solid var(--border); border-radius:4px;
 }
-.result-subj { font-size:0.83rem; font-weight:500; color:#2a3a2a; }
+.result-subj { font-size:0.83rem; font-weight:500; color:#2e2438; }
 .result-sub-note { display:block; font-size:0.68rem; color:var(--copper); font-weight:600; margin-top:0.1rem; }
 .result-grade {
   flex-shrink:0; min-width:32px; height:26px; padding:0 0.55rem;
@@ -271,7 +271,7 @@ h2 {
   border-radius:4px; font-weight:700; font-size:0.85rem;
 }
 .g-top { background:var(--copper); color:#fff; }
-.g-high { background:var(--light-copper); color:#8a5010; }
+.g-high { background:var(--light-copper); color:#b3285c; }
 .g-mid { background:var(--light-forest); color:var(--forest); }
 .g-pass { background:var(--mint); color:var(--slate); }
 .g-std { background:#ededed; color:#777; }
@@ -309,8 +309,8 @@ h2 {
 }
 .sk-row {
   display:flex; align-items:center; gap:0.7rem;
-  padding:0.45rem 0; border-bottom:1px solid #eef2ee;
-  font-size:0.86rem; color:#3a4a3a;
+  padding:0.45rem 0; border-bottom:1px solid #f3edf5;
+  font-size:0.86rem; color:#3d3348;
 }
 .sk-row:last-child { border-bottom:none; }
 .sk-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
@@ -327,7 +327,7 @@ h2 {
 }
 .day-avail { background:var(--light-forest); color:var(--forest); }
 .day-busy { background:#f0f0f0; color:#aaa; }
-.day-part { background:var(--light-copper); color:#7a5010; }
+.day-part { background:var(--light-copper); color:#b3285c; }
 
 /* ── FOOTER ── */
 footer {
@@ -356,9 +356,26 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
 }
 .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 @media(min-width:700px){ .toast{bottom:24px;} }
+
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.14em;flex-shrink:0;}
+.hero-inner{background:linear-gradient(118deg,#3f1460 0%,#6e1f80 48%,#b8357a 82%,#e0457b 100%);}
+.hero-inner::before{background:radial-gradient(ellipse 55% 75% at 85% 40%,rgba(255,170,120,0.28) 0%,transparent 70%);}
+.hero h1 em{color:#ffc7d8;}
+.tag{display:inline-flex;align-items:center;gap:0.4rem;}
+.ach-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;}
+.ach-card.forest .ach-icon{background:var(--light-forest);color:var(--forest);}
+.ach-card.copper .ach-icon{background:var(--light-copper);color:var(--copper);}
+.ach-card.slate .ach-icon{background:var(--mint);color:var(--slate);}
+.ach-card.copper::before{background:linear-gradient(90deg,var(--copper),#ff9a62);}
+.ci{display:flex;align-items:center;justify-content:center;font-size:0.95rem;margin-top:2px;}
+.share-btn .ic,.c-btn .ic{font-size:1rem;}
+.section-num{color:#e9b3c8;}
+footer{background:linear-gradient(118deg,#3f1460 0%,#6e1f80 60%,#b8357a 100%);border-top:none;}
+.g-top{background:linear-gradient(135deg,var(--copper),#ff7a5c);}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol><symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M22 10v6"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol><symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-clip" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-medal" viewBox="0 0 24 24"><path d="M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15"/><path d="M11 12 5.12 2.2"/><path d="m13 12 5.88-9.8"/><path d="M8 7h8"/><circle cx="12" cy="17" r="5"/></symbol><symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol><symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol><symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></symbol><symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol><symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol><symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol></svg>
 
 <nav>
   <span class="nav-name">Celeste Legrand</span>
@@ -373,15 +390,15 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
 
 <!-- Desktop share -->
 <div class="share-bar-desktop">
-  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
-  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Copy Link</button>
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg> Print CV</a>
+  <button class="share-btn btn-copy" onclick="copyLink()"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Copy Link</button>
 </div>
 
 <!-- Mobile share bar -->
 <div class="share-bar">
-  <a class="share-btn btn-download" href="cv-print.html" target="_blank">⬇ Print CV</a>
-  <button class="share-btn btn-share" onclick="nativeShare()">↑ Share</button>
-  <button class="share-btn btn-copy" onclick="copyLink()">🔗 Link</button>
+  <a class="share-btn btn-download" href="cv-print.html" target="_blank"><svg class="ic" aria-hidden="true"><use href="#i-printer"/></svg> Print CV</a>
+  <button class="share-btn btn-share" onclick="nativeShare()"><svg class="ic" aria-hidden="true"><use href="#i-share"/></svg> Share</button>
+  <button class="share-btn btn-copy" onclick="copyLink()"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg> Link</button>
 </div>
 
 <div class="toast" id="toast">Link copied!</div>
@@ -394,10 +411,10 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
       <h1>Celeste<br><em>Legrand</em></h1>
       <p class="hero-subtitle">Motivated &amp; Reliable &nbsp;·&nbsp; Faversham, Kent &nbsp;·&nbsp; Seeking Part-Time Work</p>
       <div class="hero-tags">
-        <span class="tag tag-copper">🏆 Dancer &amp; Performer</span>
-        <span class="tag tag-mint">🥾 Duke of Edinburgh Silver</span>
-        <span class="tag tag-mint">🎓 10 GCSEs Achieved</span>
-        <span class="tag tag-mint">📚 BTEC Dance &amp; A Level French</span>
+        <span class="tag tag-copper"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg> Dancer &amp; Performer</span>
+        <span class="tag tag-mint"><svg class="ic" aria-hidden="true"><use href="#i-mountain"/></svg> Duke of Edinburgh Silver</span>
+        <span class="tag tag-mint"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg> 10 GCSEs Achieved</span>
+        <span class="tag tag-mint"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg> BTEC Dance &amp; A Level French</span>
       </div>
     </div>
   </div>
@@ -420,16 +437,16 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
       </div>
       <div class="contact-card">
         <h3>Contact &amp; Details</h3>
-        <div class="contact-item"><span class="ci">📍</span>146 Edward Vinson Drive, Faversham, Kent ME13 8FF</div>
-        <div class="contact-item"><span class="ci">📞</span><a href="tel:07920509688" style="color:inherit;text-decoration:none;">07920 509688</a></div>
-        <div class="contact-item"><span class="ci">✉️</span><a href="mailto:celestefioralegrand@icloud.com" style="color:inherit;text-decoration:none;">celestefioralegrand@icloud.com</a></div>
-        <div class="contact-item"><span class="ci">🎂</span>16 years old</div>
-        <div class="contact-item"><span class="ci">🌐</span>www.celestelegrand.xyz</div>
-        <div class="contact-item"><span class="ci">📋</span>References available on request</div>
-        <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid #eef2ee;font-size:0.75rem;color:#aaa;text-align:center;">Eligible to work in the UK</div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>Faversham, Kent</div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><a href="tel:07920509688" style="color:inherit;text-decoration:none;">07920 509688</a></div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg></span><a href="mailto:celestefioralegrand@icloud.com" style="color:inherit;text-decoration:none;">celestefioralegrand@icloud.com</a></div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span>16 years old</div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></span>www.celestelegrand.xyz</div>
+        <div class="contact-item"><span class="ci"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg></span>References available on request</div>
+        <div style="margin-top:0.9rem;padding-top:0.9rem;border-top:1px solid #f3edf5;font-size:0.75rem;color:#aaa;text-align:center;">Eligible to work in the UK</div>
         <div class="contact-btns">
-          <a href="tel:07920509688" class="c-btn c-btn-call">📞 Call</a>
-          <a href="https://wa.me/447920509688" target="_blank" class="c-btn c-btn-wa">🟢 WhatsApp</a>
+          <a href="tel:07920509688" class="c-btn c-btn-call"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+          <a href="https://wa.me/447920509688" target="_blank" class="c-btn c-btn-wa"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp</a>
         </div>
       </div>
     </div>
@@ -448,37 +465,37 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
     </div>
     <div class="ach-grid reveal">
       <div class="ach-card forest">
-        <div class="ach-icon">🏆</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-trophy"/></svg></div>
         <h3>Best in Year — Science &amp; Drama</h3>
         <p>Awarded best in year for both Science and Drama at school prize-giving — a dual recognition that reflects academic range as well as creative talent.</p>
       </div>
       <div class="ach-card copper">
-        <div class="ach-icon">🌟</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></div>
         <h3>Performer of the Year — Year 9</h3>
         <p>Won Performer of the Year in Year 9, recognising outstanding contribution to performance and the arts within the school community.</p>
       </div>
       <div class="ach-card forest">
-        <div class="ach-icon">💃</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-music"/></svg></div>
         <h3>Best Senior Performer</h3>
         <p>Won Best Senior Performer at Miss Sophie's Dance Academy — a prestigious recognition of technical skill and stage presence amongst senior students.</p>
       </div>
       <div class="ach-card copper">
-        <div class="ach-icon">🎖️</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-award"/></svg></div>
         <h3>Dance Competitions &amp; Exams</h3>
         <p>Won many dance competitions and passed numerous dance exams with top marks — demonstrating consistent excellence and dedication to the craft over many years.</p>
       </div>
       <div class="ach-card slate">
-        <div class="ach-icon">🥾</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-mountain"/></svg></div>
         <h3>Duke of Edinburgh Bronze &amp; Silver</h3>
         <p>Holder of both Bronze and Silver DofE Awards — requiring volunteering, physical activity, skill development and a multi-day expedition. A nationally recognised mark of character.</p>
       </div>
       <div class="ach-card slate">
-        <div class="ach-icon">🎤</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg></div>
         <h3>English Spoken Distinction</h3>
         <p>Achieved a distinction in the GCSE English Language spoken exam, presenting on animal rights and veganism — demonstrating confident, articulate communication under assessment conditions.</p>
       </div>
       <div class="ach-card copper wide">
-        <div class="ach-icon">🥇</div>
+        <div class="ach-icon"><svg class="ic" aria-hidden="true"><use href="#i-medal"/></svg></div>
         <h3>Bronze &amp; Silver Medals: Ballroom and Latin</h3>
         <p>Awarded Bronze and Silver medals in Ballroom and Latin dance, assessed on technique, timing, partnering and performance across both styles.</p>
       </div>
@@ -668,7 +685,7 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
 
 <footer>
   <div class="container">
-    <p>Celeste Legrand &nbsp;·&nbsp; 146 Edward Vinson Drive, Faversham, Kent ME13 8FF</p>
+    <p>Celeste Legrand &nbsp;·&nbsp; Faversham, Kent</p>
     <p style="margin-top:0.3rem"><span>www.celestelegrand.xyz</span> &nbsp;·&nbsp; References available on request</p>
   </div>
 </footer>
