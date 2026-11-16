@@ -191,6 +191,25 @@ p{font-size:8pt;color:#444;line-height:1.55;}
 .mob-btn .ic,.desk-btn .ic{font-size:0.95rem;}
 .g-top{background:linear-gradient(135deg,var(--copper),#ff7a5c);}
 @media print{.page::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;} body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+
+/* ── MOBILE SCREEN VIEW (print stays A4 two-column) ── */
+@media screen and (max-width:699px){
+  body{padding:0.8rem 0.6rem 1.2rem;}
+  .page{padding:7mm 5.5mm 6mm;}
+  .header{grid-template-columns:1fr;}
+  .qr-block{display:none;}
+  .name-block{font-size:26pt;}
+  .header-meta{font-size:8.5pt;}
+  .body-grid{grid-template-columns:minmax(0,1fr);gap:12px;}
+  .achs{grid-template-columns:minmax(0,1fr);}
+  p,.ach p,.work-item p{font-size:9pt;}
+  .ach h4,.wt{font-size:10pt;}
+  .stitle{font-size:6.5pt;}
+  .spill{font-size:8pt;}
+  .sk-row,.ck,.wo,.gbox{font-size:8.5pt;}
+  .dbox{font-size:7pt;}
+  .mob-btn{font-size:0.78rem;padding:0.7rem 0.4rem;}
+}
 </style>
 </head>
 <body>
