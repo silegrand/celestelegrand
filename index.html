@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Celeste Legrand — CV. Motivated 16-year-old student studying BTEC Dance and A Level French, seeking part-time work in Faversham, Kent.">
 <title>Celeste Legrand — CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -372,6 +372,21 @@ footer a { color:rgba(255,255,255,0.7); text-decoration:none; }
 .section-num{color:#e9b3c8;}
 footer{background:linear-gradient(118deg,#3f1460 0%,#6e1f80 60%,#b8357a 100%);border-top:none;}
 .g-top{background:linear-gradient(135deg,var(--copper),#ff7a5c);}
+
+/* ── MOBILE ── */
+.nav-name{white-space:nowrap;}
+@media(max-width:699px){
+  .nav-links{display:none;}
+  nav{justify-content:center;}
+}
+@media(max-width:520px){
+  .avail-row{grid-template-columns:1fr;gap:0.35rem;}
+  .day-card{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0.9rem;text-align:left;font-size:0.82rem;}
+  .day-card .dn{display:inline;margin:0;font-size:0.72rem;opacity:0.75;}
+  .hero-inner{padding:44px 1.2rem 44px;}
+  section{padding:40px 0;}
+  .edu-block{padding:1.1rem;}
+}
 </style>
 </head>
 <body>
